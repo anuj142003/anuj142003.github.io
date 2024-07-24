@@ -7,7 +7,7 @@ body {
     align-items: center;
     overflow: hidden;
     background: url('background.jpg') no-repeat center center/cover;
-    animation: animateBackground 20s infinite alternate ease-in-out;
+    animation: animateBackground 20s infinite linear;
 }
 
 .content {
@@ -17,12 +17,16 @@ body {
     color: white;
 }
 
+/* Animation to move the background image */
 @keyframes animateBackground {
     0% {
-        transform: scale(1);
+        background-position: center center;
+    }
+    50% {
+        background-position: top center;
     }
     100% {
-        transform: scale(1.1);
+        background-position: center center;
     }
 }
 
